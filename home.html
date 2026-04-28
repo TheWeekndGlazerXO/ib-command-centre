@@ -1139,7 +1139,7 @@ function renderOverview() {
     <div class="sched-card">
       <h3>Today's Schedule <span class="sched-day-badge">${DAYS[dow]}</span></h3>
       ${todaySched.map(item=>{
-        const col=item.key?SUBJECTS[item.key]?.color:'var(--accent)';
+        const col=item.key?getSubjects()[item.key]?.color:'var(--accent)';
         return `<div class="sched-row">
           <div class="sched-dot" style="background:${col}"></div>
           <div class="sched-time">${item.time}</div>
@@ -1797,7 +1797,7 @@ render();
       </div>
     </div>
   </div>
-  
-</script>
+
 </body>
+
 </html>
